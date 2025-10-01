@@ -1,38 +1,4 @@
-# Deformable DETR
 
-By [Xizhou Zhu](https://scholar.google.com/citations?user=02RXI00AAAAJ),  [Weijie Su](https://www.weijiesu.com/),  [Lewei Lu](https://www.linkedin.com/in/lewei-lu-94015977/), [Bin Li](http://staff.ustc.edu.cn/~binli/), [Xiaogang Wang](http://www.ee.cuhk.edu.hk/~xgwang/), [Jifeng Dai](https://jifengdai.org/).
-
-This repository is an official implementation of the paper [Deformable DETR: Deformable Transformers for End-to-End Object Detection](https://arxiv.org/abs/2010.04159).
-
-
-## Introduction
-
-**TL; DR.** Deformable DETR is an efficient and fast-converging end-to-end object detector. It mitigates the high complexity and slow convergence issues of DETR via a novel sampling-based efficient attention mechanism.  
-
-![deformable_detr](./figs/illustration.png)
-
-![deformable_detr](./figs/convergence.png)
-
-**Abstract.** DETR has been recently proposed to eliminate the need for many hand-designed components in object detection while demonstrating good performance. However, it suffers from slow convergence and limited feature spatial resolution, due to the limitation of Transformer attention modules in processing image feature maps. To mitigate these issues, we proposed Deformable DETR, whose attention modules only attend to a small set of key sampling points around a reference. Deformable DETR can achieve better performance than DETR (especially on small objects) with 10× less training epochs. Extensive experiments on the COCO benchmark demonstrate the effectiveness of our approach.
-
-## License
-
-This project is released under the [Apache 2.0 license](./LICENSE).
-
-## Changelog
-
-See [changelog.md](./docs/changelog.md) for detailed logs of major changes. 
-
-
-## Citing Deformable DETR
-If you find Deformable DETR useful in your research, please consider citing:
-```bibtex
-@article{zhu2020deformable,
-  title={Deformable DETR: Deformable Transformers for End-to-End Object Detection},
-  author={Zhu, Xizhou and Su, Weijie and Lu, Lewei and Li, Bin and Wang, Xiaogang and Dai, Jifeng},
-  journal={arXiv preprint arXiv:2010.04159},
-  year={2020}
-}
 ```
 
 ## Main Results
@@ -102,17 +68,17 @@ python test.py
 
 ### Dataset preparation
 
-Please download [COCO 2017 dataset](https://cocodataset.org/) and organize them as following:
+Please download [Leukemia] dataset]<a href="https://drive.google.com/drive/folders/1J5ld-tK6cewj9wXWUi3rs6UdlHnDBe8U">Link</a>() and organize them as following:
 
 ```
 code_root/
 └── data/
-    └── coco/
-        ├── train2017/
-        ├── val2017/
+    └── leukemia/
+        ├── train/
+        ├── val/
         └── annotations/
-        	├── instances_train2017.json
-        	└── instances_val2017.json
+        	├── instances_train.json
+        	└── instances_val.json
 ```
 
 ### Training
